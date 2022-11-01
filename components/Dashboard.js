@@ -1,6 +1,6 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import React, {Component} from "react";
-import NewExpense from "./NewExpense";
+import Balance from "./Balance";
 import Profile from "./Profile";
 import Summarize from "./Summarize";
 import ManageAccountsSVG from "./svg/ManageAccounts";
@@ -36,7 +36,7 @@ class Dashboard extends Component {
         })}
       >
         <DashboardStack.Screen name="Summarize" component={Summarize} />
-        <DashboardStack.Screen name="Balance" component={NewExpense} />
+        <DashboardStack.Screen name="Balance" component={Balance} />
         <DashboardStack.Screen name="Profile" component={Profile} />
       </DashboardStack.Navigator>
     );
