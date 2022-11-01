@@ -14,6 +14,7 @@ import React from "react";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import NewExpense from "./components/NewExpense";
 import Register from "./components/Register";
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="NewExpense" component={NewExpense} />
         </Stack.Navigator>
       </NavigationContainer>
     );

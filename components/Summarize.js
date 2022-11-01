@@ -1,7 +1,15 @@
 import React, {Component} from "react";
-import {SafeAreaView, StyleSheet, Text, TextInput, View} from "react-native";
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Logo from "./layout/Logo";
 import ExpenseList from "./lists/expenses/ExpenseList";
+import AddSVG from "./svg/Add";
 import MathSignalsSVG from "./svg/MathSignals";
 
 const expenses = [
@@ -104,6 +112,13 @@ class Summarize extends Component {
           </View>
           <ExpenseList expenses={expenses} />
         </View>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => this.props.navigation.navigate("NewExpense")}
+          style={styles.touchableOpacityStyle}
+        >
+          <AddSVG color="#FFFFFF" />
+        </TouchableOpacity>
       </SafeAreaView>
     );
   }
@@ -151,6 +166,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#D6DAE0",
     color: "#242A3A",
     borderRadius: 7,
+  },
+  touchableOpacityStyle: {
+    position: "absolute",
+    width: 50,
+    height: 50,
+    backgroundColor: "#2361FF",
+    borderRadius: 100,
+    color: "#FFFFFF",
+    alignItems: "center",
+    justifyContent: "center",
+    bottom: 10,
+    left: 190,
   },
 });
 
